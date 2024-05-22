@@ -1,5 +1,9 @@
 /* - - - - - - - - - - - - - - */
-/* 01 - R E S E T */
+/* F O N T S */
+/* - - - - - - - - - - - - - - */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+/* - - - - - - - - - - - - - - */
+/* R E S E T */
 /* - - - - - - - - - - - - - - */
 *, *::before, *::after{
     box-sizing: border-box; 
@@ -53,19 +57,15 @@ body, html{
     scroll-behavior: smooth; 
 }
 /* - - - - - - - - - - - - - - */
-/* 02 - F O N T S */
-/* - - - - - - - - - - - - - - */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
-/* - - - - - - - - - - - - - - */
-/* 03 - V A R I A B L E S */
+/* V A R I A B L E S */
 /* - - - - - - - - - - - - - - */
 :root {
     --color-1: #fff9;
     --color-2: #0009;
-    --font-bd: Poppins, sans-serif;
+    --font-bd: 'Poppins', sans-serif;
 }
 /* - - - - - - - - - - - - - - */
-/* 04 -G E N E R A L */
+/* G E N E R A L */
 /* - - - - - - - - - - - - - - */
 body {
     align-items: center;
@@ -74,6 +74,29 @@ body {
     font-family: var(--font-bd);
     justify-content: center;
     min-height: 100vh;
+    nav {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        a:is(:link, :visited) {
+            background-color: var(--color-2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            opacity: .8;
+            transition: all 0.2s ease-in;
+            width: 40px;
+            svg {
+                width: 24px;
+            }
+        }
+        a:is(:hover) {
+            opacity: 1;
+            transform: scale(1.12);
+        }
+    }
     main {
         header {
             align-items: center;
@@ -111,6 +134,11 @@ body {
                 color: var(--color-1);
                 padding: 8px 16px;
             }
+            p {
+                color: #fff9;
+                margin: 0 auto;
+                width: 80%;
+            }
             img {
                 border-radius: 50%;
                 border: 10px solid var(--color-2);
@@ -128,44 +156,55 @@ body {
             gap: 0.6rem;
             a:is(:link, :visited) {
                 border-radius: 50px;
-                background-color: var(--color-1);
+                background: linear-gradient(to right, #fffc, #fff3);
                 color: var(--color-2);
                 display: flex;
+                align-items: center;
                 padding: 0.6rem;
                 text-decoration: none;
                 transition: all 0.4s ease-in;
                 gap: 0.6rem;
                 width: 240px;
+                span {
+                    border-radius: 20px;
+                    background-color: var(--color-2);
+                    color: #fff;
+                    font-weight: 600;
+                    height: 28px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 28px;
+                }
             }
             a:is(:hover) {
-                background-color: #fffd;
+                background: linear-gradient(to right, #fffe, #fff6);
                 transform: scale(1.05) translateY(-4px);
             }
-            span {
-                border-radius: 20px;
-                background-color: var(--color-2);
-                color: var(--color-1);
-                font-weight: 600;
-                height: 28px;
-                display: flex;
-                align-items: center;
-
-
-
-                
-                justify-content: center;
-                width: 28px;
-            }
         }
-
+        section {
+            background-color: var(--color-1);
+            border-radius: 4px;
+            margin-block: 1rem;
+            min-height: 25vh;
+            width: 400px;
+        }
     }
 }
 /* - - - - - - - - - - - - - - */
-/* 05 - M A I N   M E N U */
+/* M A I N   M E N U */
 /* - - - - - - - - - - - - - - */
 body.main-menu {
-    background-color: #9C0000;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='600' y1='25' x2='600' y2='777'%3E%3Cstop offset='0' stop-color='%239C0000'/%3E%3Cstop offset='1' stop-color='%23E2FF1F'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='650' y1='25' x2='650' y2='777'%3E%3Cstop offset='0' stop-color='%23a81100'/%3E%3Cstop offset='1' stop-color='%23f9ff13'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='700' y1='25' x2='700' y2='777'%3E%3Cstop offset='0' stop-color='%23b42500'/%3E%3Cstop offset='1' stop-color='%23ffec07'/%3E%3C/linearGradient%3E%3ClinearGradient id='d' gradientUnits='userSpaceOnUse' x1='750' y1='25' x2='750' y2='777'%3E%3Cstop offset='0' stop-color='%23bf3b00'/%3E%3Cstop offset='1' stop-color='%23fbce00'/%3E%3C/linearGradient%3E%3ClinearGradient id='e' gradientUnits='userSpaceOnUse' x1='800' y1='25' x2='800' y2='777'%3E%3Cstop offset='0' stop-color='%23cb5300'/%3E%3Cstop offset='1' stop-color='%23efac00'/%3E%3C/linearGradient%3E%3ClinearGradient id='f' gradientUnits='userSpaceOnUse' x1='850' y1='25' x2='850' y2='777'%3E%3Cstop offset='0' stop-color='%23d76e00'/%3E%3Cstop offset='1' stop-color='%23e38c00'/%3E%3C/linearGradient%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='900' y1='25' x2='900' y2='777'%3E%3Cstop offset='0' stop-color='%23e38c00'/%3E%3Cstop offset='1' stop-color='%23d76e00'/%3E%3C/linearGradient%3E%3ClinearGradient id='h' gradientUnits='userSpaceOnUse' x1='950' y1='25' x2='950' y2='777'%3E%3Cstop offset='0' stop-color='%23efac00'/%3E%3Cstop offset='1' stop-color='%23cb5300'/%3E%3C/linearGradient%3E%3ClinearGradient id='i' gradientUnits='userSpaceOnUse' x1='1000' y1='25' x2='1000' y2='777'%3E%3Cstop offset='0' stop-color='%23fbce00'/%3E%3Cstop offset='1' stop-color='%23bf3b00'/%3E%3C/linearGradient%3E%3ClinearGradient id='j' gradientUnits='userSpaceOnUse' x1='1050' y1='25' x2='1050' y2='777'%3E%3Cstop offset='0' stop-color='%23ffec07'/%3E%3Cstop offset='1' stop-color='%23b42500'/%3E%3C/linearGradient%3E%3ClinearGradient id='k' gradientUnits='userSpaceOnUse' x1='1100' y1='25' x2='1100' y2='777'%3E%3Cstop offset='0' stop-color='%23f9ff13'/%3E%3Cstop offset='1' stop-color='%23a81100'/%3E%3C/linearGradient%3E%3ClinearGradient id='l' gradientUnits='userSpaceOnUse' x1='1150' y1='25' x2='1150' y2='777'%3E%3Cstop offset='0' stop-color='%23E2FF1F'/%3E%3Cstop offset='1' stop-color='%239C0000'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg %3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' x='100' width='1100' height='800'/%3E%3Crect fill='url(%23c)' x='200' width='1000' height='800'/%3E%3Crect fill='url(%23d)' x='300' width='900' height='800'/%3E%3Crect fill='url(%23e)' x='400' width='800' height='800'/%3E%3Crect fill='url(%23f)' x='500' width='700' height='800'/%3E%3Crect fill='url(%23g)' x='600' width='600' height='800'/%3E%3Crect fill='url(%23h)' x='700' width='500' height='800'/%3E%3Crect fill='url(%23i)' x='800' width='400' height='800'/%3E%3Crect fill='url(%23j)' x='900' width='300' height='800'/%3E%3Crect fill='url(%23k)' x='1000' width='200' height='800'/%3E%3Crect fill='url(%23l)' x='1100' width='100' height='800'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+/* - - - - - - - - - - - - - - */
+/* E M M E T */
+/* - - - - - - - - - - - - - - */
+body.emmet {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='600' y1='25' x2='600' y2='777'%3E%3Cstop offset='0' stop-color='%2365FF21'/%3E%3Cstop offset='1' stop-color='%23010300'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='650' y1='25' x2='650' y2='777'%3E%3Cstop offset='0' stop-color='%2354ff07'/%3E%3Cstop offset='1' stop-color='%230a1d00'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='700' y1='25' x2='700' y2='777'%3E%3Cstop offset='0' stop-color='%234aec00'/%3E%3Cstop offset='1' stop-color='%23123700'/%3E%3C/linearGradient%3E%3ClinearGradient id='d' gradientUnits='userSpaceOnUse' x1='750' y1='25' x2='750' y2='777'%3E%3Cstop offset='0' stop-color='%2342d200'/%3E%3Cstop offset='1' stop-color='%231a5100'/%3E%3C/linearGradient%3E%3ClinearGradient id='e' gradientUnits='userSpaceOnUse' x1='800' y1='25' x2='800' y2='777'%3E%3Cstop offset='0' stop-color='%233ab800'/%3E%3Cstop offset='1' stop-color='%23226b00'/%3E%3C/linearGradient%3E%3ClinearGradient id='f' gradientUnits='userSpaceOnUse' x1='850' y1='25' x2='850' y2='777'%3E%3Cstop offset='0' stop-color='%23329e00'/%3E%3Cstop offset='1' stop-color='%232b8500'/%3E%3C/linearGradient%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='900' y1='25' x2='900' y2='777'%3E%3Cstop offset='0' stop-color='%232b8500'/%3E%3Cstop offset='1' stop-color='%23329e00'/%3E%3C/linearGradient%3E%3ClinearGradient id='h' gradientUnits='userSpaceOnUse' x1='950' y1='25' x2='950' y2='777'%3E%3Cstop offset='0' stop-color='%23226b00'/%3E%3Cstop offset='1' stop-color='%233ab800'/%3E%3C/linearGradient%3E%3ClinearGradient id='i' gradientUnits='userSpaceOnUse' x1='1000' y1='25' x2='1000' y2='777'%3E%3Cstop offset='0' stop-color='%231a5100'/%3E%3Cstop offset='1' stop-color='%2342d200'/%3E%3C/linearGradient%3E%3ClinearGradient id='j' gradientUnits='userSpaceOnUse' x1='1050' y1='25' x2='1050' y2='777'%3E%3Cstop offset='0' stop-color='%23123700'/%3E%3Cstop offset='1' stop-color='%234aec00'/%3E%3C/linearGradient%3E%3ClinearGradient id='k' gradientUnits='userSpaceOnUse' x1='1100' y1='25' x2='1100' y2='777'%3E%3Cstop offset='0' stop-color='%230a1d00'/%3E%3Cstop offset='1' stop-color='%2354ff07'/%3E%3C/linearGradient%3E%3ClinearGradient id='l' gradientUnits='userSpaceOnUse' x1='1150' y1='25' x2='1150' y2='777'%3E%3Cstop offset='0' stop-color='%23010300'/%3E%3Cstop offset='1' stop-color='%2365FF21'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg %3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' x='100' width='1100' height='800'/%3E%3Crect fill='url(%23c)' x='200' width='1000' height='800'/%3E%3Crect fill='url(%23d)' x='300' width='900' height='800'/%3E%3Crect fill='url(%23e)' x='400' width='800' height='800'/%3E%3Crect fill='url(%23f)' x='500' width='700' height='800'/%3E%3Crect fill='url(%23g)' x='600' width='600' height='800'/%3E%3Crect fill='url(%23h)' x='700' width='500' height='800'/%3E%3Crect fill='url(%23i)' x='800' width='400' height='800'/%3E%3Crect fill='url(%23j)' x='900' width='300' height='800'/%3E%3Crect fill='url(%23k)' x='1000' width='200' height='800'/%3E%3Crect fill='url(%23l)' x='1100' width='100' height='800'/%3E%3C/g%3E%3C/svg%3E");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
