@@ -187,10 +187,12 @@ body {
         section {
             background-color: var(--color-1);
             border-radius: 4px;
-            margin-block: 1rem;
-            min-height: 25vh;
-            width: 400px;
-            margin-inline: ;
+            margin: 2rem auto; /* Establece un margen superior e inferior de 2rem y auto para centrar horizontalmente */
+            min-height: 30vh;
+            max-width: 500px; /* Establece un ancho máximo */
+            padding: 20px; /* Añade un espacio de relleno */
+            box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y alto del elemento */
+        
         }
     }
 }
