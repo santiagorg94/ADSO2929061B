@@ -222,6 +222,8 @@ body.main-menu {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    background: radial-gradient(circle, #cccccc, #333333);
+
 }
 /*- - - - - - - - - - - - - */
 /*  E M M E T*/
