@@ -131,7 +131,7 @@ body{
             font-size: 1.4rem ;
             font-weight: 600;
             
-        }
+       }
         h3 {
             font-size: 1rem ;
             font-weight: 400;
@@ -189,6 +189,7 @@ body{
             margin-block: 2rem;
             justify-content: center;
             gap: 1rem;
+          
             a:is(:link, :visited){
                 border-radius: 50px;
                 background:linear-gradient(to right, #fffc, #fff3);
