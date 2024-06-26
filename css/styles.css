@@ -77,6 +77,8 @@ body{
     flex-wrap: wrap;
     min-height: 100vh;
     
+    
+    
     nav {
         position: fixed;
         top: 10px;
