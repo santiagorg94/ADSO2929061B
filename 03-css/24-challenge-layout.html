@@ -6,10 +6,11 @@
     <title>Sprite</title>
     <style>
         body {
-            background-color: #17a053;
+            background-color: #0d3c29;
             border: 8px solid white;
             margin: 0;
             padding: 20px;
+            font-family: 'Arial', sans-serif;
         }
         div.logo {
             background: url(images/spriteweb.png) no-repeat;
@@ -17,6 +18,7 @@
             height: 190px;
             margin: 0 auto;
             width: 190px;
+            filter: drop-shadow(0 0 10px #17a053);
         }
         menu {
             align-items: center;
@@ -37,12 +39,14 @@
             width: 140px;
             height: 40px;
             border-bottom: 7px solid white;
+            transition: all 0.3s ease-in-out;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00ff00;
         }
         menu a:hover {
             background-color: rgba(3, 3, 3, 0.692);
-            color: rgb(197, 197, 78);
-            border-bottom: 7px solid rgb(197, 197, 78);
-            
+            color: #00ff00;
+            border-bottom: 7px solid #00ff00;
+            text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
         }
         section {
             display: flex;
@@ -61,7 +65,12 @@
             margin: 0 auto;
             border: 2px solid white;
             width: 290px;
-            color: white;
+            filter: drop-shadow(0 0 20px #17a053);
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+        section figure.sprite:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 30px #00ff00);
         }
         section figcaption {
             font-size: 25px;
@@ -72,17 +81,18 @@
             align-items: center; 
             display: flex;
             height: 60px;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff;
         }
         section figcaption:hover {
             background-color: rgba(255, 255, 255, 0.884);
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
         }
-    section.second {
+        section.second {
             background-color: rgba(0, 0, 0, 0.4);
             margin: 0 auto;
             width: 900px;
             padding: 5px;
         }
-
         div.info {
             background-color: white;
             display: flex;
@@ -90,30 +100,29 @@
             align-items: center;
             margin: 5px;
             height: 200px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
-
         div aside {
             background: url(images/spriteweb.png) no-repeat;
             width: 15%;
-            transition: transform 0.5s ease;
+            transition: transform 0.5s ease, filter 0.5s ease;
             transform-origin: center;
         }
         div aside:hover {
-            transform: rotateY(360deg); /* Gira el elemento 360 grados cuando se pasa el cursor */
+            transform: rotateY(360deg);
+            filter: drop-shadow(0 0 20px #00ff00);
         }
-
         div p {
             width: 70%;
             text-align: justify;
             margin: 5px;
+            color: #333;
         }
-
         div aside.first {
             margin: 15px;
             background-position: -290px -499px;
             height: 95px;
         }
-
         div aside.last {
             margin: 20px;
             background-position: -100px -210px;
@@ -136,6 +145,7 @@
             height: 240px;
             margin: 0 auto;
             width: 250px;
+            filter: drop-shadow(0 0 10px #17a053);
         }
         footer menu section a {
             text-decoration: none;
@@ -146,11 +156,13 @@
             justify-content: center;
             align-items: center;
             width: 120px; 
+            transition: all 0.3s ease-in-out;
         }
         footer menu section a:hover{
-            background-color: white;
-            color: black;
-            border-bottom: 4px solid #17a053;
+            background-color: #17a053;
+            color: white;
+            border-bottom: 4px solid #00ff00;
+            text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
         }
     </style>
 </head>
@@ -166,39 +178,38 @@
             <a href="">CONTACTO</a>
         </menu>
         </header>
-            <section>
-                <figure class="sprite">
-                    <figcaption>Sprite 01</figcaption>
-                </figure>
-                <figure class="sprite">
-                    <figcaption>Sprite 02</figcaption>
-                </figure>
-                <figure class="sprite">
-                    <figcaption>Sprite 03</figcaption>
-                </figure>
-            </section>
-            <br>
-            <section class="second">
+        <section>
+            <figure class="sprite">
+                <figcaption>Sprite 01</figcaption>
+            </figure>
+            <figure class="sprite">
+                <figcaption>Sprite 02</figcaption>
+            </figure>
+            <figure class="sprite">
+                <figcaption>Sprite 03</figcaption>
+            </figure>
+        </section>
+        <br>
+        <section class="second">
             <div class="info">
                 <aside class="first"></aside>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vitae molestiae quod laborum! Id, reprehenderit inventore? Sequi ipsam debitis, necessitatibus consectetur reprehenderit, incidunt magni aliquid, voluptatem voluptates mollitia deleniti tempore!</p>
                 <aside class="last"></aside>
             </div>
-            </section>
-            <section class="second">
-            <div class="info">
-                <aside class="first"></aside>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vitae molestiae quod laborum! Id, reprehenderit inventore? Sequi ipsam debitis, necessitatibus consectetur reprehenderit, incidunt magni aliquid, voluptatem voluptates mollitia deleniti tempore!</p>
-                <aside class="last"></aside>
-            </div>
-            </section>
         </section>
         <section class="second">
-        <div class="info">
-            <aside class="first"></aside>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vitae molestiae quod laborum! Id, reprehenderit inventore? Sequi ipsam debitis, necessitatibus consectetur reprehenderit, incidunt magni aliquid, voluptatem voluptates mollitia deleniti tempore!</p>
-            <aside class="last"></aside>
-        </div>
+            <div class="info">
+                <aside class="first"></aside>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vitae molestiae quod laborum! Id, reprehenderit inventore? Sequi ipsam debitis, necessitatibus consectetur reprehenderit, incidunt magni aliquid, voluptatem voluptates mollitia deleniti tempore!</p>
+                <aside class="last"></aside>
+            </div>
+        </section>
+        <section class="second">
+            <div class="info">
+                <aside class="first"></aside>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vitae molestiae quod laborum! Id, reprehenderit inventore? Sequi ipsam debitis, necessitatibus consectetur reprehenderit, incidunt magni aliquid, voluptatem voluptates mollitia deleniti tempore!</p>
+                <aside class="last"></aside>
+            </div>
         </section>
         <br>
         <footer>
