@@ -14,15 +14,26 @@
             
         }
         
-
         header div.logo {
-      
-            background: url(images/snklogo.png) no-repeat center ; 
+            background: url(images/snklogo.png) no-repeat center; 
             margin: 0 auto;
             width: 600px;
             height: 300px;
             background-size: 600px 290px;
-        }
+            animation: pulso 2s infinite; 
+}
+
+@keyframes pulso {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
         section.caja {
             margin: 30px auto;
