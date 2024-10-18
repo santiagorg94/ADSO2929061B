@@ -192,7 +192,8 @@ body{
             justify-content: center;
             gap: 1rem;
           
-            a:is(:link, :visited){
+            a:is(:link, :visited)
+            {
                 border-radius: 50px;
                 background:linear-gradient(to right, #fffc, #fff3);
                 border: 2px solid var(--color-2);
@@ -216,6 +217,7 @@ body{
                     width: 28px;
                     
                    }
+                   
             }
            a:is(:hover){
             background:linear-gradient(to right, #fffe, #fff6);
@@ -281,4 +283,4 @@ background-size: cover;
 
         }
     }
-}
+
