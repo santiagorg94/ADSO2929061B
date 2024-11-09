@@ -1,0 +1,112 @@
+
+$primary-color: #e91e63;
+$background-color: white;
+$hover-color: #e91e63;
+$text-color: black;
+$font-family: Arial, sans-serif;
+$font-size: 1.2em;
+$menu-padding: 20px;
+$menu-font-size: 1.5em;
+
+
+body {
+  font-family: $font-family;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $background-color;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+
+h1 {
+  font-size: 1.5em;
+}
+
+
+.menu-icon {
+  font-size: $menu-font-size;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; 
+  color: $primary-color;
+
+  &.close-icon {
+    content: "X";
+    color: $primary-color;
+  }
+}
+
+
+.menu {
+  display: flex;
+  gap: 20px;
+  
+  menu {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+    font-size: $font-size;
+    padding: $menu-padding;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+    
+    &:hover {
+      background-color: $hover-color;
+      color: white;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; 
+  }
+
+  .menu {
+    display: none; 
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+    background-color: #ffff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20px;
+    z-index: 1000;
+    color: $text-color;
+
+    &.show {
+      display: flex; 
+    }
+
+    menu {
+      flex-direction: column;
+      width: 100%;
+      padding-left: 20px;
+    }
+
+    a {
+      padding: 25px;
+
+      &:hover {
+        background-color: $hover-color;
+        color: white;
+      }
+    }
+  }
+}

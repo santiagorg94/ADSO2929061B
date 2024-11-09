@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+
+h1 {
+  font-size: 1.5em;
+}
+
+.menu-icon {
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; 
+  color: #e91e63;
+}
+.menu-icon.close-icon {
+  content: "X";
+  color: #e91e63;
+}
+
+
+.menu {
+  display: flex;
+  gap: 20px;
+  flex-direction: row; 
+  padding: 0;
+}
+.menu menu {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+  padding: 20px;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+.menu a:hover {
+  background-color: #e91e63;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; 
+  }
+  .menu {
+    display: none; 
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+    background-color: white;
+    flex-direction: column; 
+    align-items: flex-start;
+    padding-top: 20px;
+    z-index: 1000;
+    color: black;
+  }
+  .menu.show {
+    display: flex; 
+  }
+  .menu menu {
+    flex-direction: column; 
+    width: 100%;
+    padding-left: 20px;
+  }
+  .menu a {
+    padding: 25px;
+  }
+  .menu a:hover {
+    background-color: #e91e63;
+    color: white;
+  }
+}
+
+/*# sourceMappingURL=10-challenge.css.map */
