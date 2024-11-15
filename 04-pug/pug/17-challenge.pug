@@ -5,22 +5,19 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title 17 Challenge
         link(rel="stylesheet", href="../../css/styles.css")
-        style. 
-            section {
-                padding: 0.5rem !important;
-            }
-
-  body.pug
-    nav 
-      a(href="../index.html")
-        svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512")
-          path(fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z")
-    main
-      header
-        h1 17 Challenge
-        p Provides an exercise to apply the learned concepts.
-       section
+        
+    body.pug
+        nav
+            a(href="../index.html")
+                svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512")
+                    path(fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z")
+        main
+            header
+                h1 17 Challenge
+                p Provides an exercise to apply the learned concepts.
+            section
                     ul
-                    each val, key in {1:'#08fafa', 2:'#17c8fa', 3:'#3296fa', 4:'#4b64fa', 5:'#6432fa', 6:'#7d01fa', 7:'#9601fa', 8:'#af01fa', 9:'#c801fa', 10:'#e101fa' }
-                        li(style="height: 80px; list-style: none; margin:5px; background-color:"+val)
-                            div(style="display: flex; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.7); color: white; font-size:30px; height: 80px; width: 80px;")=key
+                    each val, key in { 1: '#07e2e2', 2: '#16b4e2', 3: '#2d86e2', 4: '#4357e2', 5: '#5732e2', 6: '#6f01e2', 7: '#8601e2', 8: '#9e01e2', 9: '#b501e2', 10: '#cc01e2' }
+                        li(style="height: 60px; list-style: none; margin: 5px; background-color:" + val + "; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;")
+                            div(style="display: flex; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.9); color: white; font-size: 20px; height: 60px; width: 60px; border-radius: 50%;")=key
+                                li:hover(style="transform: scale(1.1);")
