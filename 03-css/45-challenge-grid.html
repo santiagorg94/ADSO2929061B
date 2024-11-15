@@ -17,44 +17,44 @@
         .gallery1 {
             grid-template-columns: repeat(3, 1fr);
             grid-template-areas:
-                "item1 item2 item3"
-                "item4 item2 item5"
-                "item6 item6 item7";
+                "bild1 bild2 bild3"
+                "bild4 bild2 bild5"
+                "bild6 bild6 bild7";
         }
 
         .gallery2 {
             grid-template-columns: repeat(4, 1fr);
             grid-template-areas:
-                "item8 item8 item9 item10"
-                "item8 item8 item13 item13"
-                "item11 item12 item13 item13";
+                "bild8 bild8 bild9 bild10"
+                "bild8 bild8 bild13 bild13"
+                "bild11 bild12 bild13 bild13";
         }
 
-        .item {
+        .bild {
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .item:hover {
+        .bild:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
         }
 
-        .item1 { grid-area: item1; }
-        .item2 { grid-area: item2; }
-        .item3 { grid-area: item3; }
-        .item4 { grid-area: item4; }
-        .item5 { grid-area: item5; }
-        .item6 { grid-area: item6; }
-        .item7 { grid-area: item7; }
-        .item8 { grid-area: item8; }
-        .item9 { grid-area: item9; }
-        .item10 { grid-area: item10; }
-        .item11 { grid-area: item11; }
-        .item12 { grid-area: item12; }
-        .item13 { grid-area: item13; }
+        .bild1 { grid-area: bild1; }
+        .bild2 { grid-area: bild2; }
+        .bild3 { grid-area: bild3; }
+        .bild4 { grid-area: bild4; }
+        .bild5 { grid-area: bild5; }
+        .bild6 { grid-area: bild6; }
+        .bild7 { grid-area: bild7; }
+        .bild8 { grid-area: bild8; }
+        .bild9 { grid-area: bild9; }
+        .bild10 { grid-area: bild10; }
+        .bild11 { grid-area: bild11; }
+        .bild12 { grid-area: bild12; }
+        .bild13 { grid-area: bild13; }
 
         img {
             width: 100%;
@@ -63,28 +63,28 @@
             display: block;
         }
 
-        .gallery1 .item1, .gallery1 .item3, .gallery1 .item4, .gallery1 .item5, .gallery1 .item7 {
+        .gallery1 .bild1, .gallery1 .bild3, .gallery1 .bild4, .gallery1 .bild5, .gallery1 .bild7 {
             height: 120px;
         }
 
-        .gallery1 .item2 {
+        .gallery1 .bild2 {
             height: 248px;
         }
 
-        .gallery1 .item6 {
+        .gallery1 .bild6 {
             height: 120px;
             width: 248px;
         }
 
-        .gallery2 .item8 {
+        .gallery2 .bild8 {
             height: 180px;
         }
 
-        .gallery2 .item9, .gallery2 .item10, .gallery2 .item11, .gallery2 .item12 {
+        .gallery2 .bild9, .gallery2 .bild10, .gallery2 .bild11, .gallery2 .bild12 {
             height: 88px;
         }
 
-        .gallery2 .item13 {
+        .gallery2 .bild13 {
             height: 180px;
         }
     </style>
@@ -104,46 +104,46 @@
         </header>
         <section>
             <div class="gallery1">
-                <div class="item item1">
+                <div class="bild bild1">
                     <img src="/03-css/images/Shinji_Ikari.jpg" alt="shinji">
                 </div>
-                <div class="item item2">
+                <div class="bild bild2">
                     <img src="/03-css/images/Spike.jpg" alt="spike">
                 </div>
-                <div class="item item3">
+                <div class="bild bild3">
                     <img src="/03-css/images/Yu Yu.jpg" alt="yuyuhakusho">
                 </div>
-                <div class="item item4">
+                <div class="bild bild4">
                     <img src="/03-css/images/Ruroni Kenshin.jpg" alt="kenshin">
                 </div>
-                <div class="item item5">
+                <div class="bild bild5">
                     <img src="/03-css/images/trigun.jpg" alt="trigun">
                 </div>
-                <div class="item item6">
+                <div class="bild bild6">
                     <img src="/03-css/images/Dragon Ball.jpg" alt="dragonball">
                 </div>
-                <div class="item item7">
+                <div class="bild bild7">
                     <img src="/03-css/images/sailor.jpg" alt="sailor">
                 </div>
             </div>
         
             <div class="gallery2">
-                <div class="item item8">
+                <div class="bild bild8">
                     <img src="/03-css/images/Sel.jpg" alt="serialexperiments">
                 </div>
-                <div class="item item9">
+                <div class="bild bild9">
                     <img src="/03-css/images/akira.jpg" alt="akira">
                 </div>
-                <div class="item item10">
+                <div class="bild bild10">
                     <img src="/03-css/images/saint seiya.jpg" alt="saint seiya">
                 </div>
-                <div class="item item11">
+                <div class="bild bild11">
                     <img src="/03-css/images/ranma.jpg" alt="ranma">
                 </div>
-                <div class="item item12">
+                <div class="bild bild12">
                     <img src="/03-css/images/escaflowne.jpg" alt="escaflowne">
                 </div>
-                <div class="item item13">
+                <div class="bild bild13">
                     <img src="/03-css/images/ghost in the shell.jpg" alt="ghost">
                 </div>
             </div>
@@ -152,3 +152,4 @@
     
 </body>
 </html>
+
