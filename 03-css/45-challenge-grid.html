@@ -3,109 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>45 - Challenge Grid</title>
     <link rel="stylesheet" href="../css/styles.css">
     <style>
-        .grid1 {
+        
+
+        .gallery1, .gallery2 {
             display: grid;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .gallery1 {
             grid-template-columns: repeat(3, 1fr);
             grid-template-areas:
-                "box1 box2 box3"
-                "box4 box2 box5"
-                "box6 box6 box7";
-            gap: 8px; 
-            margin-bottom: 10px;
+                "item1 item2 item3"
+                "item4 item2 item5"
+                "item6 item6 item7";
         }
 
-      
-
-        .box {
-            margin: 0;
-            padding: 0;
-            border: none;
-        }
-        .box1 { grid-area: box1; width: 120px; height: 120px;}
-        .box2 { grid-area: box2; width: 120px; height: 248px;}
-        .box3 { grid-area: box3; width: 120px; height: 120px;}
-        .box4 { grid-area: box4; width: 120px; height: 120px;}
-        .box5 { grid-area: box5; width: 120px; height: 120px;}
-        .box6 { grid-area: box6; width: 248px; height: 120px;}
-        .box7 { grid-area: box7; width: 120px; height: 120px;}
-
-        .grid2 {
-            display: grid;
+        .gallery2 {
             grid-template-columns: repeat(4, 1fr);
             grid-template-areas:
-                "box8 box8 box9 box10"
-                "box8 box8 box13 box13"
-                "box11 box12 box13 box13";
-            gap: 8px;
+                "item8 item8 item9 item10"
+                "item8 item8 item13 item13"
+                "item11 item12 item13 item13";
         }
-        .box8 { grid-area: box8; width: 180px; height: 180px;}
-        .box9 { grid-area: box9; width: 88px; height: 88px;}
-        .box10 { grid-area: box10; width: 88px; height: 88px;}
-        .box11 { grid-area: box11; width: 88px; height: 88px;}
-        .box12 { grid-area: box12; width: 88px; height: 88px;}
-        .box13 { grid-area: box13; width: 180px; height: 180px;}
+
+        .item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .item1 { grid-area: item1; }
+        .item2 { grid-area: item2; }
+        .item3 { grid-area: item3; }
+        .item4 { grid-area: item4; }
+        .item5 { grid-area: item5; }
+        .item6 { grid-area: item6; }
+        .item7 { grid-area: item7; }
+        .item8 { grid-area: item8; }
+        .item9 { grid-area: item9; }
+        .item10 { grid-area: item10; }
+        .item11 { grid-area: item11; }
+        .item12 { grid-area: item12; }
+        .item13 { grid-area: item13; }
 
         img {
-            width: 100%; 
-            height: 100%; 
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            display: block; 
+            display: block;
+        }
+
+        .gallery1 .item1, .gallery1 .item3, .gallery1 .item4, .gallery1 .item5, .gallery1 .item7 {
+            height: 120px;
+        }
+
+        .gallery1 .item2 {
+            height: 248px;
+        }
+
+        .gallery1 .item6 {
+            height: 120px;
+            width: 248px;
+        }
+
+        .gallery2 .item8 {
+            height: 180px;
+        }
+
+        .gallery2 .item9, .gallery2 .item10, .gallery2 .item11, .gallery2 .item12 {
+            height: 88px;
+        }
+
+        .gallery2 .item13 {
+            height: 180px;
         }
     </style>
 </head>
 <body class="css">
     <nav>
         <a href="index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+            </svg>
         </a>
     </nav>
     <main>
+        <header>
+            <h1>45 - Challenge Grid</h1>
+            <p>Irregular Gallery</p>
+        </header>
         <section>
-            <div class="grid1">
-                <div class="box box1">
+            <div class="gallery1">
+                <div class="item item1">
                     <img src="/03-css/images/Shinji_Ikari.jpg" alt="shinji">
                 </div>
-                <div class="box box2">
+                <div class="item item2">
                     <img src="/03-css/images/Spike.jpg" alt="spike">
                 </div>
-                <div class="box box3">
+                <div class="item item3">
                     <img src="/03-css/images/Yu Yu.jpg" alt="yuyuhakusho">
                 </div>
-                <div class="box box4">
+                <div class="item item4">
                     <img src="/03-css/images/Ruroni Kenshin.jpg" alt="kenshin">
                 </div>
-                <div class="box box5">
+                <div class="item item5">
                     <img src="/03-css/images/trigun.jpg" alt="trigun">
                 </div>
-                <div class="box box6">
+                <div class="item item6">
                     <img src="/03-css/images/Dragon Ball.jpg" alt="dragonball">
                 </div>
-                <div class="box box7">
+                <div class="item item7">
                     <img src="/03-css/images/sailor.jpg" alt="sailor">
                 </div>
-        
             </div>
         
-            <div class="grid2">
-                <div class="box box8">
+            <div class="gallery2">
+                <div class="item item8">
                     <img src="/03-css/images/Sel.jpg" alt="serialexperiments">
                 </div>
-                <div class="box box9">
+                <div class="item item9">
                     <img src="/03-css/images/akira.jpg" alt="akira">
                 </div>
-                <div class="box box10">
+                <div class="item item10">
                     <img src="/03-css/images/saint seiya.jpg" alt="saint seiya">
                 </div>
-                <div class="box box11">
+                <div class="item item11">
                     <img src="/03-css/images/ranma.jpg" alt="ranma">
                 </div>
-                <div class="box box12">
+                <div class="item item12">
                     <img src="/03-css/images/escaflowne.jpg" alt="escaflowne">
                 </div>
-                <div class="box box13">
+                <div class="item item13">
                     <img src="/03-css/images/ghost in the shell.jpg" alt="ghost">
                 </div>
             </div>
